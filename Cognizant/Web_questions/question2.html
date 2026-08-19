@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fruit Chart</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        img {
+    max-width: 300px;
+}
+    </style>
+</head>
+<body>
+
+    <h1>Fruit Chart</h1>
+
+    <select id="fruit-dropdown">
+        <option value="apple">Apple</option>
+        <option value="banana">Banana</option>
+        <option value="cherry">Cherry</option>
+    </select>
+
+    <br><br>
+
+    <img id="fruit-image" src="" alt="Fruit Image">
+
+</body>
+<script>
+    const dropdown = document.getElementById("fruit-dropdown");
+const image = document.getElementById("fruit-image");
+
+dropdown.addEventListener("change", function () {
+
+    switch (dropdown.value) {
+
+        case "apple":
+            image.src = "apple.jpg";
+            break;
+
+        case "banana":
+            image.src = "banana.jpg";
+            break;
+
+        case "cherry":
+            image.src = "cherry.jpg";
+            break;
+    }
+});
+</script>
+</html>

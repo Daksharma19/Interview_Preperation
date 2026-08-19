@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Page</title>
+
+    <style>
+        #saveBtn {
+            background-color: #28a745;
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Profile</h1>
+
+    <label for="name">Name:</label>
+    <input type="text" id="name">
+
+    <span id="nameError"></span>
+
+    <br><br>
+
+    <button id="saveBtn">Save Changes</button>
+
+    <script>
+        const saveBtn = document.getElementById("saveBtn");
+        const nameInput = document.getElementById("name");
+        const nameError = document.getElementById("nameError");
+
+        saveBtn.addEventListener("click", function () {
+
+            if (nameInput.value.trim().length < 3) {
+                nameError.textContent =
+                    "Name must be at least 3 characters long";
+            } else {
+                nameError.textContent = "";
+            }
+
+        });
+    </script>
+
+</body>
+</html>
